@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+        <link rel="stylesheet" href="{% static 'Home/styles.css' %}">
+        <meta name="theme-color" content="#001f3f">
+</head>
+<body>
+    <h1 style="background: blue;">Welcome to Django Templates</h1>
+    <h1>Haii{{details}}</h1>
+
+    {% if t > 12 %}
+    <h1>goodmrng</h1>
+    {% else %}
+    <h1>goodevening</h1>
+    {% endif %} 
+ 
+</body>
+</html>

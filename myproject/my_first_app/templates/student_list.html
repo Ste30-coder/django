@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student List</h1>
+    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+        {% for st in students %}
+        <tr>
+            <td>{{ st.name }}</td>
+            <td>{{ st.email }}</td>
+            <td>{{ st.age }}</td>
+            <td>
+                <a href="{% url 'student-delete' st.pk %}" style="color: red;">Delete</a>
+            </td>
+            <td>
+                <a href="{% url 'student-update' st.pk %}" style="color: red;">Update</a>
+            </td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
